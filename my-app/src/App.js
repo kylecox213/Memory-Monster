@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
+import monsterCard from "./components/monsterCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import Counter from "./components/Counter";
-import Mixer from "./components/Shaker";
+import Mixer from "./components/Mixer";
 import monsters from "./monsters.json";
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
+
   state = {
-    friends,
+    monsters,
     clickedArr: [],
     topScore: 0,
     score: 0,
@@ -18,59 +18,57 @@ class App extends Component {
   };
 
   clickPicture = (id) => {
-    //arrange images in random manner
-    const shuffledArr = this.shuffledArr(friends);
-    this.setState({ friends: shuffledArr });
-    //if clicked image already resets score and emptys array
+    const shuffledArr = this.shuffledArr(monsters);
+    this.setState({ monsters: shuffledArr });
     if (this.state.clickedArr.includes(id)) {
-      this.setState({ score: 0, clickedArr: [], message: "You Already Clicked That! Game Over!! Click an Image to Try Again!", wrongGuess: true });
+      this.setState({ score: 0, clickedArr: [], message: "Sorry! YOU LOSE!!! Try Again!", wrongGuess: true });
     } else {
       this.setState({
         clickedArr: this.state.clickedArr.concat([id]),
         score: this.state.score + 1,
-        message: "Good Guess!",
+        message: "Way To Get Em Right",
         wrongGuess: false
       });
     }
-    //sets topscore
+
     if (this.state.score > this.state.topScore) {
       this.setState({ topScore: this.state.score });
     }
   }
 
   shuffledArr = (picturesArr) => {
-    for(let i = picturesArr.length - 1; i > 0; i--){
-      const j = Math.floor(Math.random()*(i + 1));
+    for (let i = picturesArr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
       [picturesArr[i], picturesArr[j]] = [picturesArr[j], picturesArr[i]];
     }
     return picturesArr;
   }
-  
 
-    // Map over this.state.friends and render a FriendCard component for each friend object
-    render() {
-  return (
-    <Wrapper>
-      <Title>Memory Game</Title>
-      <Counter>Correct Guesses So Far: <span className="score">{this.state.score} | Top Score: {this.state.topScore}</span>
-        <p className="message">{this.state.message}</p>
-      </Counter>
-      <Shaker
-      shaker = {this.state.wrongGuess}
-      friends =
-        {this.state.friends.map(friend => (
-          <FriendCard
-            clickPicture={this.clickPicture}
-            id={friend.id}
-            key={friend.id}
-            image={friend.image}
-            value={friend.clicky}
-          />
-        ))}
-      />
-    </Wrapper>
-  );
-}
+  render() {
+
+    return (
+
+      <Wrapper>
+        <Title>Memory Monster</Title>
+        <Counter>Correct Guesses: <span className="score">{this.state.score} | Top Score: {this.state.topScore}</span>
+          <p className="message">{this.state.message}</p>
+        </Counter>
+        <Mixer
+          mixer={this.state.wrongGuess}
+          monsters=
+          {this.state.monsters.map(monster => (
+            <MonsterCard
+              clickPicture={this.clickPicture}
+              id={monster.id}
+              key={monster.id}
+              image={monster.image}
+              value={monster.clicky}
+            />
+          ))}
+        />
+      </Wrapper>
+    );
+  }
 }
 
 

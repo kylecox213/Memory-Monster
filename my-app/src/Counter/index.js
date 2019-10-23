@@ -11,7 +11,7 @@ class Counter extends React.Component{
     };
 
     handleReset = () => {
-        this.setState(!this.props.friends.clicky ? counter= 0 : {});
+        this.setState(!this.props.monsters.clicky ? counter= 0 : {});
     };
 
     render(){

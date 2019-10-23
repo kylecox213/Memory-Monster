@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function FriendCard(props) {
+function MonsterCard(props) {
   const{ id, image } = props;
 
   return (
@@ -14,4 +14,4 @@ function FriendCard(props) {
 }
 
 
-export default FriendCard;
+export default MonsterCard;
