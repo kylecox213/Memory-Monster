@@ -26,12 +26,12 @@
     },
     {
       "id": 6,
-      "image": "https://i.pinimg.com/originals/e2/9f/13/e29f13f30e6a55d1eb3c65bdeb1b19d1.jpg",
+      "image": "https://www.bestiary.us/files/images/licho_s.jpg",
       "clicky": false
     },
     {
       "id": 7,
-      "image": "https://pbs.twimg.com/media/B9XBhaeIQAMd654.jpg:large",
+      "image": "https://66.media.tumblr.com/4848fa2ac1d5dc6fec7d8c44fd6f32f8/tumblr_pkf7oxLwd21wom542o1_400.jpg",
       "clicky": false
     },
     {
@@ -46,7 +46,7 @@
     },
     {
       "id": 10,
-      "image": "https://scontent.cdninstagram.com/vp/b29d3b23dd9bccc706974bbb5405ffda/5E08F322/t51.2885-15/e35/c87.0.905.905a/s480x480/42002564_1873634592731539_3657217885334784538_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com",
+      "image": "https://i.pinimg.com/236x/0a/22/22/0a22229f66a803ea806a69878720d6ad.jpg",
       "clicky": false
     },
     {
@@ -72,6 +72,21 @@
     {
       "id": 15,
       "image": "https://i.pinimg.com/originals/7e/ee/2a/7eee2aebc69566a50af83837fe4aa6f6.jpg",
+      "clicky": false
+    },
+    {
+      "id": 16,
+      "image": "https://www.legendsofamerica.com/wp-content/uploads/2017/10/Wendigo1.jpg",
+      "clicky": false
+    },
+    {
+      "id": 17,
+      "image": "https://vignette.wikia.nocookie.net/paranormalfact/images/1/14/Aswang1.jpg/revision/latest?cb=20120627191113",
+      "clicky": false
+    },
+    {
+      "id": 18,
+      "image": "https://vignette.wikia.nocookie.net/cryptidz/images/4/4c/Adaroscreaming.jpg/revision/latest/top-crop/width/220/height/220?cb=20140514235924",
       "clicky": false
     }
   ]
