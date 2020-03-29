@@ -15,6 +15,7 @@
     text-align: center;
     background:rgb(99, 101, 100);
   }
+  
   .card > .img-container > img {
     width: 100%;
   }
@@ -30,9 +31,10 @@
   }
   
   .img-thumbnail:hover {
-    background-color: rgb(208, 164, 146);
+    background-color: rgb(177, 173, 171);
     opacity: 1;
     }
+
   .img-container:hover{
     transform: scale(1.1);
   }

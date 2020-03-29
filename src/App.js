@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import monsterCard from "./components/monsterCard";
+import MonsterCard from "./components/MonsterCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import Counter from "./components/Counter";
@@ -26,7 +26,7 @@ class App extends Component {
       this.setState({
         clickedArr: this.state.clickedArr.concat([id]),
         score: this.state.score + 1,
-        message: "Way To Get Em Right",
+        message: "Way To Get Em",
         wrongGuess: false
       });
     }

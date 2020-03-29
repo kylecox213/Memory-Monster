@@ -13,5 +13,4 @@ function MonsterCard(props) {
   );
 }
 
-
 export default MonsterCard;
